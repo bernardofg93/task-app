@@ -1,0 +1,36 @@
+import React from 'react';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import FormTask2 from './FormTask2';
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
+
+export default function ModalTask2({ handleClose2, open2 }) {
+
+    return (
+        <div>
+            <Modal
+                open={open2}
+                onClose={handleClose2}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style}>
+                    <FormTask2 
+                        handleClose2={handleClose2}
+                    />
+                </Box>
+            </Modal>
+        </div>
+    );
+}
